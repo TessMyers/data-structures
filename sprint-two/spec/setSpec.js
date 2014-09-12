@@ -16,12 +16,19 @@ describe('set', function() {
     set.add("Danny Glover");
     expect(set.contains('Danny Glover')).to.equal(true);
     expect(set.contains('Susan Sarandon')).to.equal(true);
+    expect(set.contains('bugs bunny')).to.equal(false);
   });
 
   it('should remove values from a set', function(){
     set.add("Mel Gibson");
+    set.add("Bugs Bunny");
     set.remove("Mel Gibson");
     expect(set.contains("Mel Gibson")).to.equal(false);
+    expect(set.contains('Bugs Bunny')).to.equal(true);
+    set.remove("Bugs Bunny");
+    expect(set.contains('Bugs Bunny')).to.equal(false);
+
+
   });
 
 });
