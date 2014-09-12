@@ -2,12 +2,8 @@ var makeStack = function() {
   someInstance = {};
   storage = {};
   someInstance.count = 0;
-
-  //var a;
-
   _.extend(someInstance, stackMethods);
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
+
   return someInstance;
 };
 
